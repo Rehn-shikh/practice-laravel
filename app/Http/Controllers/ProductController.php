@@ -34,9 +34,9 @@ class ProductController extends Controller
         $validated = $request->validate([
             'title' => ['required', 'max:255'],
         ]);
-    
+
         Product::create($validated);
-    
+
         return redirect('/');
     }
 
